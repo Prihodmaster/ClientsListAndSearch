@@ -5,7 +5,7 @@ import './App.css';
 class Details extends Component{
     render(){
         return(
-        this.props.informationClient===true&&this.props.data!==undefined?
+        this.props.informationClient && this.props.data !== undefined ?
             <div className="details-item">
                 <div className={"general"}>
                     <div className={"general-avatar"}>
@@ -30,7 +30,7 @@ class Details extends Component{
                     <p>Street: {this.props.data.address.street}</p>
                     <p>Zip-code: {this.props.data.address.zipCode}</p>
                 </div>
-            </div>:
+            </div> :
             <div className="details-item">Select from the list.</div>
 
         )
